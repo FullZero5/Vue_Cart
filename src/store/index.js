@@ -8,17 +8,20 @@ export default {
       {
         id: 1,
         text: "lorem1",
-        cost: 100
+        cost: 100,
+        img: "https://via.placeholder.com/90"
       },
       {
         id: 2,
         text: "lorem2",
-        cost: 200
+        cost: 200,
+        img: "https://via.placeholder.com/90"
       },
       {
         id: 3,
         text: "lorem3",
-        cost: 300
+        cost: 300,
+        img: "https://via.placeholder.com/90"
       }
     ],
     cart: {},

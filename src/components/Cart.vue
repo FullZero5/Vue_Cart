@@ -31,9 +31,7 @@
             <ul>
               <li class="product" v-for="item in cart" v-bind:key="item.id">
                 <div class="product-image">
-                  <a href="#0">
-                    <img src="product-preview.png" alt="placeholder" />
-                  </a>
+                  <a href="#0"> <img :src="item.img" :alt="item.text" /> </a>
                 </div>
                 <div class="product-details">
                   <h3>
