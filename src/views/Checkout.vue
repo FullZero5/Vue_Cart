@@ -15,7 +15,6 @@
           <section>
             <span>Товар</span> <span>Кол.</span> <span>Цена</span>
           </section>
-
           <section>
             <figure v-for="item in cart" v-bind:key="item.id">
               <span
@@ -28,7 +27,6 @@
             <span>Итого</span> <span>{{ Total }}</span>
           </section>
         </main>
-
         <footer>
           <router-link to="/">Отмена</router-link>
           <a href="#0">Заказать</a>
