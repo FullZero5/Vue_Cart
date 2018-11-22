@@ -13,6 +13,7 @@ export default {
     state.Total = calculateAmount(state.cart);
   },
   REMOVE_ITEM: (state, item) => {
+    state.delItem = {};
     state.delItem = copyFunc(state.cart, state.delItem, item);
     delete state.cart[item];
     state.Total = calculateAmount(state.cart);
@@ -21,5 +22,10 @@ export default {
   CHENGE_QT: state => {
     state.TotalPositions = calculateTotal(state.cart);
     state.Total = calculateAmount(state.cart);
+  },
+  REVIVA: state => {
+    state.cart = Object.assign(state.delItem, state.cart);
+    state.Total = calculateAmount(state.cart);
+    state.TotalPositions = calculateTotal(state.cart);
   }
 };

@@ -13,6 +13,9 @@
     "build": "node build/build.js"
   },
   "dependencies": {
+    "bourbon": "5.1.0",
+    "node-sass-loader": "0.1.7",
+    "sass-loader": "7.1.0",
     "vue": "^2.5.2",
     "vue-router": "3.0.1",
     "vuex": "3.0.1"

@@ -24,7 +24,8 @@
             <span
               class="undo"
               v-bind:class="Object.keys(delItem).length > 0 ? 'visible' : ''"
-              >удалено. <a href="#0">Восстановить</a></span
+              >удалено.
+              <a href="#" @click.prevent="revivalItem();">Восстановить</a></span
             >
           </header>
           <div class="body">
@@ -96,7 +97,7 @@ export default {
     ...mapGetters(["cart", "TotalPositions", "delItem", "Total"])
   },
   methods: {
-    ...mapActions(["removeItem", "chengeQt"]),
+    ...mapActions(["removeItem", "chengeQt", "revivalItem"]),
     showCart(event) {
       console.log(event);
     }
