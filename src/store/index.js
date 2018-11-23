@@ -8,13 +8,13 @@ export default {
     items: [
       {
         id: 1,
-        text: "lorem1",
+        text: "Товар с длинным названием",
         cost: 100,
         img: "https://via.placeholder.com/"
       },
       {
         id: 2,
-        text: "lorem2",
+        text: "Товар с длинным названием",
         cost: 200,
         img: "https://via.placeholder.com/"
       },
@@ -63,5 +63,10 @@ export default {
   getters,
   actions,
   mutations,
-  plugins: [createPersistedState()]
+  plugins: [
+    createPersistedState({
+      key: "cart",
+      paths: ["cart", "TotalPositions", "Total"]
+    })
+  ]
 };
