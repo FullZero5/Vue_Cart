@@ -114,37 +114,11 @@ export default {
   opacity: 0;
 }
 
-// Note: we use Autoprefixer to add vendor prefixes to our CSS -> https://github.com/postcss/autoprefixer*/
+@import '../scss/_variables'; 
 
-@import '../scss/_variables'; // colors, fonts etc...
+@import '../scss/_mixins'; 
 
-@import '../scss/_mixins'; // custom mixins
-
-@import '../scss/_layout'; // responsive grid and media queries
-
-/* -------------------------------- 
-
-Primary style
-
--------------------------------- */
-
-/**, *::after, *::before {
-	box-sizing: border-box;
-}*/
-
-/*html {
-	font-size: 62.5%;
-	@include font-smoothing;
-}
-
-body {
-	font: {
-		size: 1.6rem;
-		family: $primary-font; // variables inside partials > _variables.scss
-	}
-	color: $color-1;
-	background-color: $color-4;
-}*/
+@import '../scss/_layout'; 
 
 a {
 	color: $color-2;
@@ -159,15 +133,6 @@ main {
 	text-align: center;
 	padding: 2em 5%;
 }
-
-/*h1 {
-	font-size: 2rem;
-	padding: 3em 0 .8em;
-
-	@include MQ(M) {
-		font-size: 3.2rem;
-	}
-}*/
 
 .cd-add-to-cart {
 	display: inline-block;
