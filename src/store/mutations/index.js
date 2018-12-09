@@ -27,5 +27,8 @@ export default {
     state.cart = Object.assign(state.delItem, state.cart);
     state.Total = calculateAmount(state.cart);
     state.TotalPositions = calculateTotal(state.cart);
+  },
+  GETDATA: (state, data) => {
+    state.items = data;
   }
 };

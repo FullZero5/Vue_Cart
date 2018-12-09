@@ -82,7 +82,7 @@ body {
   transition: all 0.3s;
 }
 .Icon--colored {
-  fill: #f097a5;
+  fill: #120494;
 }
 .Icon--stroked {
   fill: none;
@@ -235,7 +235,7 @@ body {
   &__title {
     color: #000;
     margin-bottom: 1rem;
-    text-transform: uppercase;
+
     font-family: var(--font-secondary);
     font-weight: 400;
   }

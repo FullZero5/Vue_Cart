@@ -32,11 +32,11 @@
             <ul>
               <li class="product" v-for="item in cart" v-bind:key="item.id">
                 <div class="product-image">
-                  <a href="#0"> <img :src="item.img+'90'" :alt="item.text" /> </a>
+                  <a href="#0"> <img :src="item.thumb_photo" :alt="item.title" /> </a>
                 </div>
                 <div class="product-details">
                   <h3>
-                    <a href="#">{{ item.text }}</a>
+                    <a href="#">{{ item.title }}</a>
                   </h3>
                   <span class="price">{{ item.cost }} ₽</span>
                   <div class="actions">
@@ -97,10 +97,7 @@ export default {
     ...mapGetters(["cart", "TotalPositions", "delItem", "Total"])
   },
   methods: {
-    ...mapActions(["removeItem", "chengeQt", "revivalItem"]),
-    showCart(event) {
-      console.log(event);
-    }
+    ...mapActions(["removeItem", "chengeQt", "revivalItem"])
   }
 };
 </script>
@@ -673,7 +670,7 @@ Main Components
 		}
 
 		h3, .price {
-			font-size: 1.8rem;
+			font-size: 1rem;
 		}
 	}
 }

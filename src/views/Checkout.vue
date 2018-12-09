@@ -18,7 +18,7 @@
           <section>
             <figure v-for="item in cart" v-bind:key="item.id">
               <span
-                ><strong>{{ item.text }}</strong></span
+                ><strong>{{ item.title }}</strong></span
               >
               <span>{{ item.qt }}</span> <span>{{ item.cost }}</span>
             </figure>
@@ -81,8 +81,6 @@ export default {
   -o-align-items: flex-start;
   align-items: flex-start;
   -ms-flex-align: start;
-  background-color: #fe8888;
-  font-family: "Roboto Condensed", sans-serif;
 }
 @media (min-height: 580px) {
   .body {

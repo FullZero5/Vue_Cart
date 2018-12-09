@@ -3,5 +3,7 @@ export default {
   delItem: ({ delItem }) => delItem,
   Total: ({ Total }) => Total,
   TotalPositions: ({ TotalPositions }) => TotalPositions,
-  Products: ({ items }) => items
+  Products: ({ items }) => items,
+  GetProductsId: ({ items }) => id =>
+    items[items.findIndex(obj => obj.id === id)] || null
 };
