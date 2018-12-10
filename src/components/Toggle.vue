@@ -4,25 +4,33 @@
       id="toggle-on"
       class="toggle toggle-left"
       name="toggle"
-      value="false"
+      :value="toggle"
       type="radio"
       checked
     />
-    <label for="toggle-on" class="btn">Yes</label>
+    <label for="toggle-on" class="btn" @click.self="toggleChenge">Yes</label>
     <input
       id="toggle-off"
       class="toggle toggle-right"
       name="toggle"
-      value="true"
+      :value="toggle"
       type="radio"
     />
-    <label for="toggle-off" class="btn">No</label>
+    <label for="toggle-off" class="btn" @click.self="toggleChenge">No</label>
   </div>
 </template>
 
 <script>
+import { mapActions, mapGetters } from "vuex";
+
 export default {
-  name: "Toggle"
+  name: "Toggle",
+  computed: {
+    ...mapGetters(["toggle"])
+  },
+  methods: {
+    ...mapActions(["toggleChenge"])
+  }
 };
 </script>
 
@@ -35,7 +43,7 @@ export default {
   z-index: -1;
 }
 .btn {
-  border: 2px solid #1a1a1a;
+  border: 2px solid #2c97de;
   display: inline-block;
   padding: 10px;
   position: relative;
@@ -50,10 +58,10 @@ input[type="radio"].toggle {
     min-width: 60px;
     &:hover {
       background: none;
-      color: #1a1a1a;
+      color: #2c97de;
     }
     &:after {
-      background: #1a1a1a;
+      background: #2c97de;
       content: "";
       height: 100%;
       position: absolute;

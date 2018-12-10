@@ -1,11 +1,14 @@
 <template>
   <div>
-    <ul class="ProductSet" v-bind:class="view">
+    <ul
+      class="ProductSet"
+      v-bind:class="[toggle ? 'ProductSet--grid' : 'ProductSet--list']"
+    >
       <li
         v-for="item in Products"
         v-bind:key="item.id"
         class="ProductCard"
-        v-bind:class="view_c"
+        v-bind:class="[toggle ? 'ProductCard--grid' : 'ProductCard--list']"
       >
         <div class="ProductCard__img-wrapper">
           <ImageItem
@@ -59,13 +62,11 @@ export default {
   },
   data() {
     return {
-      view: "ProductSet--grid",
-      view_c: "ProductCard--grid",
       showMobileMenu: false
     };
   },
   computed: {
-    ...mapGetters(["Products"])
+    ...mapGetters(["Products", "toggle"])
   },
   methods: {
     ...mapActions(["addToItems"])

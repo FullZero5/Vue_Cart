@@ -30,5 +30,8 @@ export default {
   },
   GETDATA: (state, data) => {
     state.items = data;
+  },
+  CHENGETOGGLE: state => {
+    state.toggle = !state.toggle;
   }
 };

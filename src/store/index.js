@@ -5,6 +5,7 @@ import createPersistedState from "vuex-persistedstate";
 
 export default {
   state: {
+    toggle: true,
     items: [
       {
         id: 1,

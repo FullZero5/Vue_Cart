@@ -39,7 +39,7 @@ new Vue({
   store,
   beforeCreate() {
     this.$http
-      .jsonp(getURL(method, { offset: 1, album_id: 1, extended: 1 }))
+      .jsonp(getURL(method, { offset: 1, album_id: 0, extended: 1 }))
       .then(response => {
         return response.json();
       })

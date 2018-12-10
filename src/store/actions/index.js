@@ -3,5 +3,6 @@ export default {
   removeItem: ({ commit }, item) => commit("REMOVE_ITEM", item),
   chengeQt: ({ commit }) => commit("CHENGE_QT"),
   revivalItem: ({ commit }) => commit("REVIVA"),
-  getData: ({ commit }, data) => commit("GETDATA", data)
+  getData: ({ commit }, data) => commit("GETDATA", data),
+  toggleChenge: ({ commit }) => commit("CHENGETOGGLE")
 };
