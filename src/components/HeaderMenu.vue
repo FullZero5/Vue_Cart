@@ -115,7 +115,8 @@ header {
       background: #e2e2e2;
       color: white;
     }
-    div {
+    .left,
+    .right {
       display: block;
     }
   }
